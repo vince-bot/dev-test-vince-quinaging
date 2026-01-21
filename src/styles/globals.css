@@ -49,6 +49,18 @@
   --color-accent-light-orange: #F89848;
   --color-accent-turquoise-surf: #00B2D6;
   --color-accent-alice-blue: #EBF7FB;
+
+
+  /* BREAKPOINTS */
+
+  --width-xs: 320px;   /* very small devices */
+  --width-3sm: 375px;  /* very small devices */
+  --width-2sm: 426px;  /* very small devices */
+  --width-sm: 640px;   /* small mobile */
+  --width-md: 768px;   /* tablet */
+  --width-lg: 1024px;  /* laptop */
+  --width-xl: 1280px;  /* desktop */
+  --width-2xl: 1536px; /* large desktop */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,14 +81,14 @@ body {
   max-width: 1550px; 
   margin-left: auto;
   margin-right: auto;
-  padding-left: 116px;
-  padding-right: 116px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .container-fluid {
   max-width: 1550px; 
   margin-left: auto;
   margin-right: auto;
-  padding-left: 116px;
-  padding-right: 0px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

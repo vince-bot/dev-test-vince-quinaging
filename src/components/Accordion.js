@@ -16,9 +16,16 @@ export default function Accordion() {
       content: (
         <>
           <div className="space-y-4">
-            <h3 className="text-neutral-jet text-[28px] font-bold">
-              SAMPLE ACCORDION
-            </h3>
+            <p className="text-neutral-dark-grey text-base">
+              <strong>Dr. Melissa Nguyen</strong> – Data Governance Lead, Sydney
+              Local Health District; specialises in privacy frameworks and
+              secure data infrastructure.
+            </p>
+            <p className="text-neutral-dark-grey text-base">
+              <strong>A/Prof. David Chen</strong> – Implementation Scientist and
+              Clinical Trialist; experienced in designing ethical research
+              protocols and data sharing models in multisite studies.
+            </p>
           </div>
         </>
       ),
@@ -31,7 +38,7 @@ export default function Accordion() {
         <div key={index}>
           <button
             onClick={() => toggle(index)}
-            className="w-full text-left px-4 py-3 flex justify-between items-center cursor-pointer bg-neutral-light-grey text-neutral-jet font-bold text-xl rounded-xl"
+            className="w-full text-left px-4 py-3 flex justify-between items-center cursor-pointer bg-neutral-light-grey text-neutral-jet font-bold text-lg md:text-xl rounded-xl"
           >
             {item.title}
             <span className="p-3">

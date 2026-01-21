@@ -1,83 +1,13 @@
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import CustomIcon from "../components/svg-custom/CustomIcon";
-import { IoSearch } from "react-icons/io5";
 import { MdChevronRight } from "react-icons/md";
-import { FaRegUserCircle, FaYoutube } from "react-icons/fa";
-import { HiClock } from "react-icons/hi2";
-import { MdCalendarToday } from "react-icons/md";
 import Accordion from "@/components/Accordion";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
-  const logo = "/image/head-logo.png";
   const heroLogo = "/image/icon/hero-logo2.png";
   const imageYoutube = "/image/image-youtube.jpg";
-  const footerLogo = "/image/footer-logo-design.png";
-  const menu = [
-    {
-      name: "Knowledge Hub",
-      link: "#",
-    },
-    {
-      name: "Programs",
-      link: "#",
-    },
-    {
-      name: "Training and Events",
-      link: "#",
-    },
-    {
-      name: "News",
-      link: "#",
-    },
-    {
-      name: "About Us",
-      link: "#",
-    },
-  ];
-
-  const quickLinks = [
-    {
-      name: "About Us",
-      link: "#",
-    },
-    {
-      name: "Knowledge Hub",
-      link: "#",
-    },
-    {
-      name: "Our Impact",
-      link: "#",
-    },
-    {
-      name: "News",
-      link: "#",
-    },
-    {
-      name: "Programs",
-      link: "#",
-    },
-    {
-      name: "Training and Events",
-      link: "#",
-    },
-  ];
-
-  const otherLinks = [
-    {
-      name: "Privacy Policy",
-      link: "#",
-    },
-    {
-      name: "Disclaimer",
-      link: "#",
-    },
-    {
-      name: "Sitemap  ",
-      link: "#",
-    },
-  ];
 
   const relatedResources = [
     {
@@ -116,74 +46,20 @@ export default function Home() {
 
   return (
     <>
-      <nav className=" top-0 z-10 w-full bg-neutral-white">
-        <div className="container flex items-center justify-between py-5 h-20 ">
-          <Image
-            src={logo}
-            alt="Logo"
-            className="w-57.75 h-12.5"
-            width={1000}
-            height={1000}
-            quality={100}
-            priority
-          />
-          <div className="flex gap-x-5 items-center">
-            <Link href="#" className="text-black font-bold">
-              Login
-            </Link>
-            {/* <IoSearch size={24} /> */}
-            <CustomIcon
-              iconType="search"
-              fill="#000000"
-              width={24}
-              height={24}
-            />
-            <Link
-              href="#"
-              className="bg-grape-gradient rounded-4xl px-6 py-4 text-white font-bold"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
-        <div className="container w-full bg-core-dark-blue border-b border-neutral-grey">
-          <ul>
-            {menu.map((item, index) => (
-              <li key={index} className="inline-block">
-                <Link
-                  href={item.link}
-                  className="relative
-                    text-white font-medium px-8 py-5 inline-block
-                    hover:bg-neutral-jet
-                    before:content-['•']
-                    before:absolute
-                    before:left-5
-                    before:opacity-0
-                    before:transition-opacity
-                    before:text-core-bright-blue
-                    hover:before:opacity-100"
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
+      <Navbar />
       <section className="w-full  ">
-        <div className="container bg-core-dark-blue relative">
+        <div className="w-full max-w-[1550px] mx-auto px-5 sm:px-10 md:px-19px lg:px-25 xl:px-29 bg-core-dark-blue relative">
           <Image
             src={heroLogo}
-            alt="Logo"
-            className="absolute -top-27 right-52 w-[566px] h-[355px] object-contain"
-            width={1000}
-            height={1000}
-            quality={100}
+            alt="Hero decoration"
+            width={566}
+            height={355}
             priority
+            className="absolute z-0 right-4 top-0 w-[220px] h-auto sm:right-10 sm:w-[300px] md:right-24 md:w-[400px]  lg:right-52 lg:-top-0 lg:w-[566px] object-contain pointer-events-none"
           />
-          <div className="flex justify-between">
-            <div className="flex flex-col">
-              <div className=" flex flex-col pt-5">
+          <div className="flex flex-col lg:flex-row justify-between">
+            <div className="flex flex-col w-full lg:w-auto">
+              <div className=" flex flex-col pt-5 z-10">
                 <ol className="flex items-center space-x-2">
                   <li>
                     <a
@@ -213,7 +89,7 @@ export default function Home() {
                 </ol>
               </div>
               <div className="w-full h-full py-14">
-                <div className="flex flex-col ">
+                <div className="flex flex-col space-y-5">
                   <div className="flex justify-start gap-3 items-center pb-3">
                     <div className="bg-white py-3 px-3 rounded-xl">
                       <CustomIcon
@@ -227,36 +103,47 @@ export default function Home() {
                       Video
                     </span>
                   </div>
-                  <div className="flex flex-col leading-1.5">
-                    <span className="text-[44px] font-bold text-white">
-                      Data Management and Privacy in
-                    </span>
-                    <span className="text-[44px] font-bold text-white">
-                      Health Research
-                    </span>
+                  <div className="flex flex-col sm:leading-10 lg:leading-12 text-[35px] lg:text-[44px] font-bold text-white">
+                    <span>Data Management and Privacy in</span>
+                    <span>Health Research</span>
                   </div>
-                  <p className="text-sm text-neutral-light-grey/90">
-                    An essential guide to responsible data handling in health
-                    research, covering storage, privacy, de-
-                  </p>
-                  <p className="text-sm text-neutral-light-grey/90">
-                    identification, and legal compliance.
-                  </p>
-                  <div className="flex gap-x-5">
+                  <div className="flex flex-col text-sm text-neutral-light-grey/90">
+                    <p>
+                      An essential guide to responsible data handling in health
+                      research, covering storage, privacy, de-
+                    </p>
+                    <p>identification, and legal compliance.</p>
+                  </div>
+                  <div className="flex flex-col md:flex-row gap-x-5">
                     <div className="flex items-center gap-x-3 mt-4">
-                      <FaRegUserCircle className="text-neutral-light-grey" />
+                      <CustomIcon
+                        iconType="user-circle"
+                        width={18}
+                        height={18}
+                        fill="#F3F4F7"
+                      />
                       <span className="text-sm text-neutral-light-grey">
                         Published by SHP Research Methods Team
                       </span>
                     </div>
                     <div className="flex items-center gap-x-3 mt-4">
-                      <HiClock className="text-neutral-light-grey" />
+                      <CustomIcon
+                        iconType="clock"
+                        width={18}
+                        height={18}
+                        fill="#F3F4F7"
+                      />
                       <span className="text-sm text-neutral-light-grey">
                         15 minute
                       </span>
                     </div>
                     <div className="flex items-center gap-x-3 mt-4">
-                      <MdCalendarToday className="text-neutral-light-grey" />
+                      <CustomIcon
+                        iconType="calendar"
+                        width={18}
+                        height={18}
+                        fill="#F3F4F7"
+                      />
                       <span className="text-sm text-neutral-light-grey">
                         Updated March 12, 2025
                       </span>
@@ -265,31 +152,43 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-y-3 items-center justify-center">
+            <div className="flex flex-col w-full lg:w-auto gap-y-3 items-center justify-center pb-10 lg:pb-0">
               <Link
                 href="#"
-                className="bg-grape-gradient w-full text-center rounded-4xl px-6 py-4 text-white font-bold cursor-pointer"
+                className="group relative w-full text-center rounded-4xl px-6 py-4 bg-grape-gradient text-white font-bold cursor-pointer overflow-hidden"
               >
-                Watch Resource
+                {/* Bullet / icon */}
+                <span className="absolute left-8 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  •
+                </span>
+                <span className="inline-block group-hover:translate-x-1 transition-transform duration-300">
+                  Watch Resource
+                </span>
               </Link>
 
               <Link
                 href="#"
-                className="bg-neutral-jet w-full text-center rounded-4xl px-6 py-4 text-white font-bold cursor-pointer"
+                className="group relative w-full text-center rounded-4xl px-6 py-4 bg-neutral-jet text-white font-bold cursor-pointer overflow-hidden"
               >
-                Add to my collection
+                {/* Bullet / icon */}
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  •
+                </span>
+                <span className="inline-block group-hover:translate-x-1 transition-transform duration-300">
+                  Add to my collection
+                </span>
               </Link>
             </div>
           </div>
         </div>
       </section>
       <section className="">
-        <div className="container-fluid bg-neutral-white">
-          <div className="w-full flex py-10 gap-x-10">
-            <div className="w-3/5 flex flex-col gap-y-10">
-              <div className="flex flex-col bg-accent-alice-blue p-10 rounded-xl gap-y-10 ">
+        <div className="w-full max-w-[1550px] mx-auto pl-5 sm:pl-10 md:pl-19px sm:pr-10 lg:pr-0 pr-5 md:pr-10 lg:pl-25 xl:pl-29 bg-neutral-white">
+          <div className="w-full flex flex-col lg:flex-row py-10 gap-x-10">
+            <div className="w-full lg:w-3/5 flex flex-col gap-y-10">
+              <div className="flex flex-col bg-accent-alice-blue p-5 md:p-10 rounded-xl gap-y-10 ">
                 <div className="flex flex-col gap-y-5">
-                  <span className="text-black font-bold text-2xl">
+                  <span className="text-black font-bold text-xl md:text-2xl">
                     What is this for?
                   </span>
                   <p className="text-neutral-dark-grey text-base leading-6">
@@ -300,18 +199,18 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-y-5">
-                  <span className="text-black font-bold text-2xl">
+                  <span className="text-black font-bold text-xl md:text-2xl">
                     Key Takeaways
                   </span>
                   <div className="flex flex-col gap-y-3">
                     <div className="flex items-center gap-x-3">
                       <CustomIcon
                         iconType="checkmark"
-                        width={16}
-                        height={16}
+                        width={24}
+                        height={24}
                         fill="#1F3262"
                       />
-                      <p className="text-neutral-dark-grey text-base leading-6">
+                      <p className="text-neutral-dark-grey text-sm md:text-base leading-6">
                         Understand legal and ethical obligations for handling
                         health data
                       </p>
@@ -319,22 +218,22 @@ export default function Home() {
                     <div className="flex items-center gap-x-3">
                       <CustomIcon
                         iconType="checkmark"
-                        width={16}
-                        height={16}
+                        width={24}
+                        height={24}
                         fill="#1F3262"
                       />
-                      <p className="text-neutral-dark-grey text-base leading-6">
+                      <p className="text-neutral-dark-grey text-sm md:text-base leading-6">
                         Learn how to securely store and manage participant data
                       </p>
                     </div>
                     <div className="flex items-center gap-x-3">
                       <CustomIcon
                         iconType="checkmark"
-                        width={16}
-                        height={16}
+                        width={24}
+                        height={24}
                         fill="#1F3262"
                       />
-                      <p className="text-neutral-dark-grey text-base leading-6">
+                      <p className="text-neutral-dark-grey text-sm md:text-base leading-6">
                         Explore de-identification strategies and data sharing
                         considerations
                       </p>
@@ -342,11 +241,11 @@ export default function Home() {
                     <div className="flex items-center gap-x-3">
                       <CustomIcon
                         iconType="checkmark"
-                        width={16}
-                        height={16}
+                        width={24}
+                        height={24}
                         fill="#1F3262"
                       />
-                      <p className="text-neutral-dark-grey text-base leading-6">
+                      <p className="text-neutral-dark-grey text-sm md:text-base leading-6">
                         Recognise the role of data governance in research
                         integrity
                       </p>
@@ -368,22 +267,29 @@ export default function Home() {
                 securely and ethically, ensuring research integrity and
                 participant trust.
               </p>
-              <div>
+              <div className="relative w-full h-[495px] rounded-lg overflow-hidden">
                 <Image
                   src={imageYoutube}
                   alt="Logo"
-                  className="w-full h-[495px] object-cover rounded-lg"
+                  className="w-full h-full object-cover"
                   width={1000}
                   height={1000}
                   quality={100}
                   priority
+                />
+                <CustomIcon
+                  iconType="play-button"
+                  width={60} // increase size for better visibility
+                  height={60}
+                  fill="#E91730"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
                 />
               </div>
               <div>
                 <Accordion />
               </div>
               <div className="space-y-4">
-                <h3 className="text-neutral-jet text-[28px] font-bold">
+                <h3 className="text-neutral-jet text-xl sm:text-2xl lg:text-[28px] text-center md:text-start font-bold">
                   About the Presenters
                 </h3>
 
@@ -400,10 +306,10 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col space-y-4 shadow-[0_4px_20px_rgba(20,20,43,0.03)] p-5 rounded-xl">
-                <h5 className="text-neutral-jet text-xl font-bold">
+                <h5 className="text-neutral-jet text-xl font-bold text-center md:text-start">
                   Was this resource helpful to you?
                 </h5>
-                <div className="flex gap-x-4">
+                <div className="flex gap-4 justify-center flex-wrap">
                   <Link
                     href="#"
                     className="flex items-center gap-x-3 border border-neutral-border hover:bg-neutral-light-grey transition-all duration-300 ease-in-out rounded-full px-6 py-4"
@@ -449,31 +355,33 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-2/5">
-              <div className="bg-neutral-light-grey rounded-tl-xl rounded-bl-xl pr-29 py-10 pl-10 space-y-8">
+            <div className="w-full lg:w-2/5 pt-10 lg:pt-0">
+              <div className="bg-neutral-light-grey rounded-tl-xl rounded-bl-xl pl-5 pr-5 sm:pl-10 sm:pr-10  py-10 space-y-8">
                 <h5 className="text-neutral-jet text-xl font-bold">
                   Usage Context
                 </h5>
                 <div className="flex flex-col space-y-3">
-                  <span className="uppercase text-sm text-core-dark-blue font-bold tracking-widest">
+                  <span className="uppercase text-xs md:text-sm text-core-dark-blue font-bold md:tracking-widest">
                     Included in knowledge Pathways
                   </span>
                   <div className="bg-neutral-white rounded-xl p-5 space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="text-base font-bold text-core-dark-blue ">
+                    <div className=" flex items-center justify-between cursor-pointer">
+                      <span className="text-sm md:text-base font-bold text-core-dark-blue group-hover:text-accent-blue transition-colors">
                         Introduction to Health Research
                       </span>
-                      <div className="rounded-full bg-neutral-light-grey w-fit p-2">
+
+                      <div className="rounded-full bg-neutral-light-grey p-2 group-hover:bg-core-dark-blue transition-colors duration-300">
                         <CustomIcon
                           iconType="chevron-right"
                           width={12}
                           height={12}
-                          fill="#1F3262"
+                          fill="#6A6A6A"
+                          className="group-hover:translate-x-1 transition-transform duration-300"
                         />
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-base font-bold text-core-dark-blue ">
+                      <span className="text-sm md:text-base font-bold text-core-dark-blue ">
                         Clinical Research Methods
                       </span>
                       <div className="rounded-full bg-neutral-light-grey w-fit p-2">
@@ -481,19 +389,19 @@ export default function Home() {
                           iconType="chevron-right"
                           width={12}
                           height={12}
-                          fill="#1F3262"
+                          fill="#6A6A6A"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col space-y-3">
-                  <span className="uppercase text-sm text-core-dark-blue font-bold tracking-widest">
+                  <span className="uppercase text-xs md:text-sm text-core-dark-blue font-bold md:tracking-widest">
                     Included in CURATED COLLECTIONS
                   </span>
                   <div className="bg-neutral-white rounded-xl p-5 space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-base font-bold text-core-dark-blue ">
+                      <span className="text-sm md:text-base font-bold text-core-dark-blue ">
                         Research Ethics and Governance
                       </span>
                       <div className="rounded-full bg-neutral-light-grey w-fit p-2">
@@ -501,12 +409,12 @@ export default function Home() {
                           iconType="chevron-right"
                           width={12}
                           height={12}
-                          fill="#1F3262"
+                          fill="#6A6A6A"
                         />
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-base font-bold text-core-dark-blue ">
+                      <span className="text-sm md:text-base font-bold text-core-dark-blue ">
                         Consumer engagement in action
                       </span>
                       <div className="rounded-full bg-neutral-light-grey w-fit p-2">
@@ -514,7 +422,7 @@ export default function Home() {
                           iconType="chevron-right"
                           width={12}
                           height={12}
-                          fill="#1F3262"
+                          fill="#6A6A6A"
                         />
                       </div>
                     </div>
@@ -541,11 +449,11 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="container bg-neutral-light-grey py-10 px-10">
-          <h3 className="text-neutral-jet text-[32px] font-bold">
+        <div className="w-full max-w-[1550px] mx-auto px-5 sm:px-10 md:px-19px lg:px-25 xl:px-29 bg-neutral-light-grey py-10">
+          <h3 className="text-neutral-jet text-xl md:text-[25px] xl:text-[32px] font-bold">
             Related Resources
           </h3>
-          <div className="grid grid-cols-3 gap-x-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-5">
             {relatedResources.map((item, index) => (
               <div
                 key={index}
@@ -560,13 +468,15 @@ export default function Home() {
                       fill="#FFFFFF"
                     />
                   </div>
-                  <span className="text-core-dark-blue font-bold text-sm">
+                  <span className="text-core-dark-blue font-bold text-xs sm:text-sm">
                     Knowledge Pathway
                   </span>
                   <div className="flex items-center gap-2">
-                    <span className="text-sm text-neutral-grey">4 modules</span>
+                    <span className="text-xs sm:text-sm text-neutral-grey">
+                      4 modules
+                    </span>
                     <span className="text-neutral-grey">•</span>
-                    <span className="text-sm text-neutral-grey">
+                    <span className="text-xs sm:text-sm text-neutral-grey">
                       45 minutes
                     </span>
                   </div>
@@ -606,188 +516,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="container">
-          <div className=" w-full h-[120px] md:h-[160px]  z-0">
-            <Image
-              src="/image/footer-logo-design.png"
-              alt="Footer wave design"
-              className="w-[1550px] h-auto object-cover"
-              width={1000}
-              height={1000}
-              quality={100}
-              priority
-            />
-          </div>
-        </div>
-      </section>
-      <footer className="container w-full pt-10 overflow-hidden">
-        <div className="container bg-core-dark-blue z-10 pt-10">
-          <div className="flex w-full pt-20 pb-10">
-            <div className="flex flex-col w-2/5">
-              <div className="flex flex-col pb-10">
-                <Image
-                  src="/image/footer-logo.png"
-                  alt="Logo"
-                  className="w-[249px] h-[96px] object-cover z-10"
-                  width={1000}
-                  height={1000}
-                  quality={100}
-                  priority
-                />
-                <div className="flex flex-col text-neutral-light-grey text-sm mt-10 gap-y-1">
-                  <span>Level 2 The Hub</span>
-                  <span>Charles Perkins Centre (D17)</span>
-                  <span>The University of Sydney NSW 2006</span>
-                </div>
-                <div className="flex items-center gap-x-4 mt-8">
-                  <Link
-                    href="#"
-                    className="text-neutral-light-grey text-sm bg-neutral-jet px-4 py-3 rounded-full flex items-center w-fit gap-x-2"
-                  >
-                    Contact Us{" "}
-                    <CustomIcon
-                      iconType="chevron-right"
-                      width={12}
-                      height={12}
-                      fill="#FFFFFF"
-                    />
-                  </Link>
-                  <CustomIcon
-                    iconType="linkedin"
-                    width={18}
-                    height={18}
-                    fill="#FFFFFF"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="uppercase text-accent-light-orange font-bold tracking-widest">
-                  Quick Links
-                </span>
-                <div className="grid grid-cols-2 mt-5 gap-y-5">
-                  {quickLinks.map((link, index) => (
-                    <Link
-                      key={index}
-                      href={link.link}
-                      className="text-neutral-light-grey text-sm hover:text-accent-light-orange transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col w-3/5">
-              <div className="relative bg-neutral-white rounded-lg p-5 flex flex-col  overflow-hidden">
-                <Image
-                  src="/image/frame-footer.png"
-                  alt="Decoration"
-                  className="absolute top-0 right-0 z-10 w-[287px] object-contain pointer-events-none"
-                  width={1000}
-                  height={1000}
-                  quality={100}
-                  priority
-                />
-
-                <span className="uppercase text-neutral-jet text-2xl font-bold">
-                  Join Our Mailing List
-                </span>
-
-                <div className="flex items-center">
-                  <p className="text-sm text-neutral-dark-grey max-w-xl">
-                    To receive the latest news, events, training, and
-                    opportunities from Sydney Health Partners.
-                  </p>
-
-                  <Link
-                    href="#"
-                    className="bg-grape-gradient w-full text-center rounded-4xl px-8 py-4 z-20 text-white font-bold inline-block"
-                  >
-                    Become a site member to join
-                  </Link>
-                </div>
-              </div>
-              <div className="flex flex-col space-y-2 mt-10">
-                <span className="uppercase text-accent-light-orange font-bold tracking-widest">
-                  ACCREDITATION
-                </span>
-                <p className="text-sm text-neutral-light-grey font-normal">
-                  We are accredited by the National Health and Medical Research
-                  Council as a Research Translation Centre – recognition of our
-                  leadership in research and the translation of evidence into
-                  excellent patient care.
-                </p>
-                <div className="grid grid-cols-4 gap-x-5 mt-5 items-center">
-                  <Image
-                    src="/image/comp-1.png"
-                    alt="Logo"
-                    className="w-auto h-[79px] object-contain"
-                    width={1000}
-                    height={1000}
-                    quality={100}
-                    priority
-                  />
-                  <Image
-                    src="/image/comp-2.png"
-                    alt="Logo"
-                    className="w-full h-[103px] object-contain"
-                    width={1000}
-                    height={1000}
-                    quality={100}
-                    priority
-                  />
-                  <span className="flex font-bold uppercase text-sm justify-end items-center text-neutral-white">
-                    a member of
-                  </span>
-                  <Image
-                    src="/image/comp-3.png"
-                    alt="Logo"
-                    className="w-auto h-[64px] object-contain"
-                    width={1000}
-                    height={1000}
-                    quality={100}
-                    priority
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col space-y-2 mt-10">
-                <span className="uppercase text-accent-light-orange font-bold tracking-widest">
-                  Acknowledgement of country
-                </span>
-                <p className="text-sm text-neutral-light-grey font-normal">
-                  We recognise and pay respect to the Elders and communities –
-                  past, present, and emerging – of the lands on which we work
-                  and live. For thousands of years, they have shared and
-                  exchanged knowledges across innumerable generations for the
-                  benefit of all.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center w-full justify-between py-10">
-            <div className="flex items-center gap-x-3">
-              <span className="text-xs text-neutral-light-grey">
-                Copyright © Sydney Health Partners.
-              </span>
-              <span className="flex gap-x-3">
-                {otherLinks.map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.link}
-                    className="text-xs font-bold text-neutral-light-grey hover:text-accent-light-orange"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </span>
-            </div>
-            <span className="text-neutral-light-grey text-xs">
-              Website by <strong>Marameo Design</strong>
-            </span>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }
