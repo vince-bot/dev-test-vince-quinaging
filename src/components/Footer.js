@@ -51,18 +51,8 @@ export default function Footer({}) {
 
   return (
     <>
-      <footer className=" w-full overflow-hidden bg-core-dark-blue">
-        {/* Decorative wave */}
-        <div className="w-full relative max-w-[1550px] mx-auto px-5 md:px-19 lg:px-25 xl:px-29 bg-core-dark-blue z-10 pt-10">
-          <div className="absolute top-0 left-0 w-full h-[60px] sm:h-[80px] md:h-[110px] lg:h-[140px] z-0">
-            <Image
-              src={footerLogo}
-              alt=""
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+      <footer className="relative w-full  overflow-hidden">
+        <div className="w-full max-w-[1550px] mx-auto px-5 md:px-19 lg:px-25 xl:px-29 bg-core-dark-blue z-10 pt-10">
           <div className="flex flex-col lg:flex-row w-full pb-0 md:pb-10">
             <div className="flex flex-col w-full lg:w-2/5">
               <div className="flex flex-col pb-10 justify-center items-center lg:items-start">
