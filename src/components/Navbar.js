@@ -34,7 +34,7 @@ export default function Navbar({}) {
   ];
 
   return (
-    <nav className="w-full bg-neutral-white fixed top-0 z-50 border-b border-neutral-light-grey">
+    <nav className="w-full bg-neutral-white top-0 z-50 border-b border-neutral-light-grey">
       <div className="w-full max-w-[1550px] mx-auto px-5 sm:px-10 lg:px-25 xl:px-29 flex items-center justify-between h-20">
         <Image
           src={logo}

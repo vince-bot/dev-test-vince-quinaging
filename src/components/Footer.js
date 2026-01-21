@@ -91,7 +91,7 @@ export default function Footer({}) {
                   />
                 </div>
               </div>
-              <div className="flex flex-col pb-10 lg:pb-0  items-center lg:items-start md:text-start text-center">
+              <div className="flex flex-col pb-10 lg:pb-0 w-full items-center lg:items-start md:text-start text-center">
                 <span className="uppercase text-accent-light-orange font-bold tracking-widest">
                   Quick Links
                 </span>

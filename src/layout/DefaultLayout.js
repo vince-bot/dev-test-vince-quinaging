@@ -9,7 +9,7 @@ const DefaultLayout = (props) => {
         <title>Sample</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-screen mt-20 lg:mt-35">
+      <div className="h-screen">
         <Navbar />
         <main>{props.children}</main>
         <Footer />

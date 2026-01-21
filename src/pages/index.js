@@ -46,7 +46,6 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
       <section className="w-full  ">
         <div className="w-full max-w-[1550px] mx-auto px-5 sm:px-10 md:px-19px lg:px-25 xl:px-29 bg-core-dark-blue relative">
           <Image
