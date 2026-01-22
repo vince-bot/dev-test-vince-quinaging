@@ -91,13 +91,7 @@ export default function Navbar({}) {
               <li key={index}>
                 <Link
                   href={item.link}
-                  className="relative text-white font-medium px-8 py-5 inline-block hover:bg-neutral-jet
-                  before:content-['•']
-                  before:absolute
-                  before:left-5
-                  before:opacity-0
-                  before:text-core-bright-blue
-                  hover:before:opacity-100"
+                  className="relative text-white font-medium px-8 py-5 inline-block hover:bg-neutral-jet before:content-['•'] before:absolute before:left-5 before:opacity-0 before:text-core-bright-blue hover:before:opacity-100"
                 >
                   {item.name}
                 </Link>

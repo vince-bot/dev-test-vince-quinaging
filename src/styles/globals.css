@@ -53,14 +53,17 @@
 
   /* BREAKPOINTS */
 
-  --width-xs: 320px;   /* very small devices */
-  --width-3sm: 375px;  /* very small devices */
-  --width-2sm: 426px;  /* very small devices */
-  --width-sm: 640px;   /* small mobile */
-  --width-md: 768px;   /* tablet */
-  --width-lg: 1024px;  /* laptop */
-  --width-xl: 1280px;  /* desktop */
-  --width-2xl: 1536px; /* large desktop */
+  --breakpoint-xs: 320px;
+  --breakpoint-1sm: 340px;
+  --breakpoint-3sm: 375px;
+  --breakpoint-2sm: 500px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-2md: 970px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-2lg: 1140px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
 @media (prefers-color-scheme: dark) {

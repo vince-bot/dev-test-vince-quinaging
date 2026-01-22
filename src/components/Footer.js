@@ -51,8 +51,29 @@ export default function Footer({}) {
 
   return (
     <>
-      <footer className="relative w-full  overflow-hidden">
-        <div className="w-full max-w-[1550px] mx-auto px-5 md:px-19 lg:px-25 xl:px-29 bg-core-dark-blue z-10 pt-10">
+      <footer className="relative w-full mt-20 xl:mt-40">
+        <di className="max-w-[1550px] mx-auto overflow-hidden z-50">
+          <Image
+            src={footerLogo}
+            alt="Footer decoration"
+            className="
+              absolute
+              top-7.5 1sm:top-8.5 3sm:top-12 2sm:top-14.5 sm:top-17 md:top-21.5 2md:top-25 lg:top-28.5 xl:top-35 2xl:top-40
+              left-0
+              w-full
+              h-auto
+              -translate-y-full
+              mx-auto
+              z-0
+              pointer-events-none
+              overflow-hidden
+            "
+            width={2000}
+            height={300}
+            priority
+          />
+        </di>
+        <div className="relative w-full max-w-[1550px] mx-auto px-5 md:px-19 lg:px-25 xl:px-29 bg-core-dark-blue z-10 pt-10">
           <div className="flex flex-col lg:flex-row w-full pb-0 md:pb-10">
             <div className="flex flex-col w-full lg:w-2/5">
               <div className="flex flex-col pb-10 justify-center items-center lg:items-start">
@@ -91,16 +112,31 @@ export default function Footer({}) {
                   />
                 </div>
               </div>
-              <div className="flex flex-col pb-10 lg:pb-0 w-full items-center lg:items-start md:text-start text-center">
+              <div className="flex flex-col py-10 pb-10 lg:pb-0 w-full items-center lg:items-start md:text-start text-center">
                 <span className="uppercase text-accent-light-orange font-bold tracking-widest">
                   Quick Links
                 </span>
-                <div className="grid grid-cols-1 md:grid-cols-2 mt-5 gap-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 mt-5 gap-y-5 lg:w-full">
                   {quickLinks.map((link, index) => (
                     <Link
                       key={index}
                       href={link.link}
-                      className="text-neutral-light-grey text-sm hover:text-accent-light-orange transition-colors"
+                      className="
+                      relative pl-3
+                      text-neutral-light-grey text-sm
+                      transition-all duration-300
+                      hover:text-accent-light-orange
+                      before:content-['•']
+                      before:absolute
+                      before:left-0
+                      before:top-1/2
+                      before:-translate-y-1/2
+                      before:opacity-0
+                      before:transition-opacity
+                      before:duration-300
+                      before:text-core-bright-blue
+                      hover:before:opacity-100
+                    "
                     >
                       {link.name}
                     </Link>
@@ -124,7 +160,7 @@ export default function Footer({}) {
                   Join Our Mailing List
                 </span>
 
-                <div className="flex flex-col md:flex-row items-center space-y-5 md:space-y-0">
+                <div className="flex flex-col md:flex-row items-center space-y-5 md:space-y-0 space-x-6">
                   <p className="text-sm text-neutral-dark-grey max-w-xl">
                     To receive the latest news, events, training, and
                     opportunities from Sydney Health Partners.

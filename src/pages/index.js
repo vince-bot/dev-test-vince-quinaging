@@ -447,7 +447,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section className="z-50">
         <div className="w-full max-w-[1550px] mx-auto px-5 sm:px-10 md:px-19px lg:px-25 xl:px-29 bg-neutral-light-grey py-10">
           <h3 className="text-neutral-jet text-xl md:text-[25px] xl:text-[32px] font-bold">
             Related Resources
